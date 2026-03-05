@@ -1,0 +1,13 @@
+// 1. 共用變數 & mixins
+// @import 'variables';
+// @import 'mixins';
+
+// 2. 共用元件樣式
+// @import 'components/header';
+// @import 'components/footer';
+// @import 'components/button';
+
+
+// 3. 專案模組樣式
+// Resume SPA 專案
+@use 'modules/resume';

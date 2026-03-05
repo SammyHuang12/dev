@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\CustomerController;
 use App\Http\Controllers\ComputerController;
 use App\Http\Controllers\LoginController;
+use App\Http\Controllers\ResumeController;
 
 Route::get('/', function () {
     return view('welcome');
@@ -21,3 +22,6 @@ Route::delete('computers/{id}', [ComputerController::class, 'destroy'])->name('c
 
 // login
 Route::get('login', [loginController::class, 'index']);
+
+// resume
+Route::get('resume', [ResumeController::class, 'index']);

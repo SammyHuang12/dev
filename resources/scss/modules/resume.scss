@@ -1,0 +1,404 @@
+// ===== 變數區 =====
+$brand-primary: #1a3a5f;
+$brand-secondary: rgb(13, 110, 253);
+$brand-accent: #f39c12;
+$bg-body: #f4f7f9;
+$card-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+
+$font-family-base: 'Noto Sans TC', sans-serif;
+$text-color-base: #334155;
+$nav-height: 95px;
+
+
+// ===== 全域設定 =====
+body {
+    background-color: $bg-body;
+    font-family: $font-family-base;
+    color: $text-color-base;
+    scroll-behavior: smooth;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+section {
+    scroll-margin-top: $nav-height; // ≈ nav 高度
+}
+
+/* 導航 (Desktop) */
+.resume-nav {
+    background: $brand-primary;
+    color: white;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.list-group-item {
+
+    &.active,
+    &:hover {
+        font-weight: bold;
+    }
+}
+
+/* 大頭照 */
+.photo-box {
+    width: 100%;
+    max-width: 150px;
+    /* height: 160px; */
+    aspect-ratio: 1 / 1;
+    background: #e9ecef;
+    border: 2px dashed #ccc;
+    border-radius: 50%;
+    display: flex;
+    /* flex-direction: column; */
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: 0.3s;
+    overflow: hidden;
+
+    &:hover {
+        border-color: $brand-secondary;
+        color: $brand-secondary;
+    }
+}
+
+.resume-photo {
+    width: 100%;
+    max-width: 155px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 1px solid #ddd;
+    aspect-ratio: 1 / 1;
+}
+
+.modal-dialog {
+    max-width: 100vw;
+}
+
+.required::after {
+    content: " *";
+    color: red;
+}
+
+/* 卡片美化 */
+.card {
+    border: none;
+    border-radius: 16px;
+    box-shadow: $card-shadow;
+    margin-bottom: 2rem;
+
+    &-header {
+        background-color: #fff !important;
+        padding: 1.25rem 1.5rem;
+        border-bottom: 2px solid #f1f5f9;
+        border-radius: 16px 16px 0 0 !important;
+    }
+
+    &-title {
+        font-weight: 700;
+        color: $brand-primary;
+        font-size: 1.25rem;
+
+        i {
+            margin-right: 12px;
+        }
+    }
+}
+
+/* 技能評分系統 */
+.skill-group {
+    background: #fff;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    padding: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.star-rating {
+    display: inline-flex;
+    flex-direction: row-reverse;
+    gap: 5px;
+
+    i {
+        font-size: 1.2rem;
+        color: #cbd5e1;
+        cursor: pointer;
+        transition: 0.2s;
+    }
+}
+
+/* 點選效果 */
+.star-rating {
+
+    i {
+
+        &:hover,
+        &:hover~i,
+        &.active,
+        &.active~i {
+            color: $brand-accent;
+        }
+
+    }
+
+}
+
+/* 預覽與列印樣式 */
+.preview-body {
+    background: white;
+    min-height: 297mm;
+    /* A4比例 */
+    /* padding: 20mm; */
+}
+
+.preview-label {
+    font-weight: bold;
+    color: var(--brand-primary);
+    border-left: 5px solid var(--brand-primary);
+    padding-left: 12px;
+    margin-top: 25px;
+    margin-bottom: 15px;
+    font-size: 1.1rem;
+    background: #f8fafc;
+}
+
+.preview {
+    &-body {
+        background: white;
+        min-height: 297mm;
+        /* A4比例 */
+        /* padding: 20mm; */
+    }
+
+    &-label {
+        font-weight: bold;
+        color: $brand-primary;
+        border-left: 5px solid $brand-primary;
+        padding-left: 12px;
+        margin-top: 25px;
+        margin-bottom: 15px;
+        font-size: 1.1rem;
+        background: #f8fafc;
+    }
+}
+
+.item {
+
+    &-row {
+        background: #f8fafc;
+        border: 1px solid #e2e8f0;
+        border-radius: 10px;
+        padding: 1.25rem;
+        margin-bottom: 1rem;
+        position: relative;
+
+        &:hover {
+            border-color: var(--brand-secondary);
+            background: #fff;
+        }
+
+    }
+
+}
+
+.remove-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    color: #94a3b8;
+    cursor: pointer;
+
+    &:hover {
+        color: #ef4444;
+    }
+}
+
+.progress,
+.mb-2 {
+    page-break-inside: avoid;
+}
+
+/* 預覽模式下的專業外觀優化 */
+.resume-preview-wrapper {
+    background-color: #fff;
+    font-family: $font-family-base;
+    padding: 18mm;
+
+    /* 工作經歷單一項 */
+    .position-relative {
+        break-inside: avoid;
+
+        /* 工作經歷的時間軸效果 */
+        &::before {
+            content: "";
+            position: absolute;
+            left: -5px;
+            top: 5px;
+            width: 9px;
+            height: 9px;
+            background-color: #0d6efd;
+            border-radius: 50%;
+        }
+    }
+
+    /* 強調文字層次 */
+    h5 {
+        letter-spacing: 1px;
+        color: #1a3a5f;
+        text-transform: uppercase;
+    }
+}
+
+/* 進度條外觀自定義 */
+.progress {
+    background-color: #e9ecef;
+    border-radius: 10px;
+    overflow: hidden;
+
+    &-bar {
+        background: linear-gradient(90deg, #1a3a5f 0%, #0d6efd 100%) !important;
+        transition: width 0.8s ease-in-out;
+    }
+}
+
+/* ===== 區塊避免被切開 ===== */
+.resume-section {
+    break-inside: avoid;
+    page-break-inside: avoid;
+}
+
+/* 工作經歷單一項 */
+.position-relative {
+    break-inside: avoid;
+}
+
+/* 技能 */
+.progress {
+    break-inside: avoid;
+}
+
+@media (min-width: 992px) {
+    .preview-body {
+        padding: 50px;
+    }
+}
+
+@media (min-width: 552px) {
+    .modal-dialog {
+        max-width: 80vw;
+    }
+}
+
+/* 列印優化：隱藏不必要的背景與陰影 */
+/* ================= PRINT ================= */
+@media print {
+    html {
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+    }
+
+    /* 隱藏 UI */
+    nav,
+    .resume-nav,
+    .no-print,
+    .list-group,
+    .modal-header,
+    .modal-footer {
+        display: none;
+    }
+
+    /* 背景 */
+    body {
+        background: white;
+    }
+
+    /* 只顯示履歷 */
+    body>*:not(.modal) {
+        display: none;
+    }
+
+    /* 解除 Bootstrap modal 限制 */
+    .modal {
+        position: absolute;
+        inset: 0;
+        display: block;
+        overflow: visible;
+
+        &-dialog {
+            max-width: none;
+            width: 100%;
+            margin: 0;
+            transform: none;
+        }
+
+        &-content {
+            border: none;
+            box-shadow: none;
+        }
+
+        &-body {
+            padding: 0;
+            overflow: visible;
+        }
+    }
+
+    /* 履歷紙張 */
+    #previewContent {
+        width: 210mm;
+        min-height: 297mm;
+        margin: 0 auto;
+        padding: 0;
+        background: white;
+    }
+
+    /* 避免被切頁 */
+    h1,
+    h2,
+    h3,
+    h4,
+    p,
+    li,
+    .card,
+    .item-row,
+    // .resume-section,
+    .section {
+        break-inside: avoid;
+        page-break-inside: avoid;
+        margin-bottom: 20px;
+    }
+
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    .resume-photo {
+        page-break-inside: avoid;
+        /* 指定列印時圓形圖片是正方形 */
+        width: 110px !important;
+        height: 110px !important;
+
+        /* 確保圖片保持圓形 */
+        border-radius: 50% !important;
+
+        /* 避免 object-fit 因印刷縮放被覆蓋 */
+        object-fit: cover !important;
+    }
+
+    /* 技能條顏色 */
+    .progress-bar {
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+    }
+
+    /* A4 */
+    @page {
+        size: A4 portrait;
+        margin: 20mm;
+    }
+}
