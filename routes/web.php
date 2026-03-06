@@ -5,6 +5,7 @@ use App\Http\Controllers\CustomerController;
 use App\Http\Controllers\ComputerController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\ResumeController;
+use App\Http\Controllers\AdminController;
 
 Route::get('/', function () {
     return view('welcome');
@@ -25,3 +26,6 @@ Route::get('login', [loginController::class, 'index']);
 
 // resume
 Route::get('resume', [ResumeController::class, 'index']);
+
+// admin
+Route::get('admin', [AdminController::class, 'index']);

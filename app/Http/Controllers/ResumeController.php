@@ -9,7 +9,7 @@ class ResumeController extends Controller
     public function index()
     {
         $projectName = 'resume';
-        return view('resume/index', compact('projectName'));
+        return view('resume.index', compact('projectName'));
     }
 
     
