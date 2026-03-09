@@ -8,7 +8,7 @@ use App\Http\Controllers\ResumeController;
 use App\Http\Controllers\AdminController;
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('admin.login');
 });
 
 // 客戶 CRUD
@@ -28,4 +28,19 @@ Route::get('login', [loginController::class, 'index']);
 Route::get('resume', [ResumeController::class, 'index']);
 
 // admin
-Route::get('admin', [AdminController::class, 'index']);
+Route::prefix('admin')->group(function () {
+
+    // 登入頁
+    Route::get('/', [AdminController::class, 'login'])->name('admin.login');
+    Route::get('/login', [AdminController::class, 'login']);
+
+    // 登入送出
+    Route::post('/login', [AdminController::class, 'authenticate'])->name('admin.authenticate');
+
+    // 登出
+    Route::post('/logout', [AdminController::class, 'logout'])->name('admin.logout');
+
+    // Dashboard
+    Route::get('/dashboard', [AdminController::class, 'dashboard'])->name('admin.dashboard');
+
+});

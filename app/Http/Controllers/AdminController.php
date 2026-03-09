@@ -6,7 +6,30 @@ use Illuminate\Http\Request;
 
 class AdminController extends Controller
 {
-    public function index()
+    public function login()
+    
+    {
+        $data = array();
+        $data ['projectName'] = 'admin';
+        $data ['page'] = 'login';
+        $data ['title'] = 'Login';        
+    
+        return view($data ['projectName'].'.'.$data ['page'], $data);
+    }
+    
+    public function authenticate(Request $request)
+    {
+        // 驗證帳號密碼
+    }
+
+    public function logout()
+    {
+        // 登出
+    }
+
+
+
+    public function dashboard()
     
     {
         $data = array();
@@ -17,5 +40,14 @@ class AdminController extends Controller
         return view($data ['projectName'].'.'.$data ['page'], $data);
     }
 
+    public function tableLists()
     
+    {
+        $data = array();
+        $data ['projectName'] = 'admin';
+        $data ['page'] = 'tablelists';
+        $data ['title'] = 'Table-Lists';        
+    
+        return view($data ['projectName'].'.'.$data ['page'], $data);
+    }
 }

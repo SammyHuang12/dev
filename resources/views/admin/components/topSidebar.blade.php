@@ -14,10 +14,11 @@
 
                         <a href="" class="logo logo-light">
                             <span class="logo-sm">
-                                <img src="{{ asset('/picture/logo-sm.png') }}" alt="logo-sm-light" height="22">
+                                <img src="{{ asset('/picture/kencont_logo_sm.png') }}" alt="logo-sm-light"
+                                    class="w-100">
                             </span>
                             <span class="logo-lg">
-                                <img src="{{ asset('/picture/logo-light.png') }}" alt="logo-light" height="20">
+                                <img src="{{ asset('/picture/kencont_logo_s.png') }}" alt="logo-light" class="w-100">
                             </span>
                         </a>
                     </div>

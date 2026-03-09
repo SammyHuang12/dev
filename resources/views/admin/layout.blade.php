@@ -7,15 +7,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta content="Premium Multipurpose Admin & Dashboard Template" name="description">
     <meta content="Themesdesign" name="author">
+    <link rel="icon" type="image/png" href="{{ asset('/picture/kencont_logo_sb.png') }}">
 
+    @if($page !== 'login')
     <!-- jquery.vectormap css -->
-    <link rel="stylesheet" href="{{ asset('css/jquery-jvectormap-1.2.2.css') }}" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="{{ asset('css/jquery-jvectormap-1.2.2.css') }}" type="text/css">
 
     <!-- DataTables -->
-    <link rel="stylesheet" href="{{ asset('css/dataTables.bootstrap4.min.css') }}" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="{{ asset('css/dataTables.bootstrap4.min.css') }}" type="text/css">
 
     <!-- Responsive datatable examples -->
-    <link rel="stylesheet" href="{{ asset('css/responsive.bootstrap4.min.css') }}" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="{{ asset('css/responsive.bootstrap4.min.css') }}" type="text/css">
+
+    <!-- frappe-gantt-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/frappe-gantt/dist/frappe-gantt.css">
+    @endif
 
     <!-- Bootstrap Css -->
     <link rel="stylesheet" href="{{ asset('css/bootstrap.min.css') }}" id="bootstrap-style" rel="stylesheet"
@@ -27,13 +33,13 @@
     <!-- App Css-->
     <link rel="stylesheet" href="{{ asset('css/app.min.css') }}" id="app-style" rel="stylesheet" type="text/css">
 
-    <!-- frappe-gantt-->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/frappe-gantt/dist/frappe-gantt.css">
+
 </head>
 
 <!-- <body class=" bg-light"> -->
 
-<body data-topbar="dark">
+<body {!! $page !=='login' ? 'data-topbar="dark"' : 'class="auth-body-bg"' !!}>
+    @if($page !== 'login')
     <!-- Begin page -->
     <div id="layout-wrapper">
         <!-- ========== top Sidebar Start ========== -->
@@ -68,6 +74,9 @@
         </footer>
     </div>
     <!-- end main content-->
+    @else
+    @yield('login')
+    @endif
 
     <!-- JAVASCRIPT -->
     <script src="{{ asset('js/jquery.min.js') }}"></script>
@@ -76,6 +85,7 @@
     <script src="{{ asset('js/simplebar.min.js') }}"></script>
     <script src="{{ asset('js/waves.min.js') }}"></script>
 
+    @if($page !== 'login')
     <!-- apexcharts -->
     <script src="{{ asset('js/apexcharts.min.js') }}"></script>
 
@@ -95,6 +105,7 @@
     <script src="{{ asset('js/responsive.bootstrap4.min.js') }}"></script>
 
     <script src="{{ asset('js/dashboard.init.js') }}"></script>
+    @endif
 
     <!-- App js -->
     <script src="{{ asset('js/app.js') }}"></script>
