@@ -45,7 +45,7 @@ class AdminController extends Controller
     {
         $data = array();
         $data ['projectName'] = 'admin';
-        $data ['page'] = 'tableLists';
+        $data ['page'] = 'table-lists';
         $data ['title'] = 'Table-Lists';        
     
         return view($data ['projectName'].'.'.$data ['page'], $data);
@@ -56,7 +56,7 @@ class AdminController extends Controller
     {
         $data = array();
         $data ['projectName'] = 'admin';
-        $data ['page'] = 'eventDetails';
+        $data ['page'] = 'event-details';
         $data ['title'] = 'Event-Details';        
     
         return view($data ['projectName'].'.'.$data ['page'], $data);
