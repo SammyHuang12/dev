@@ -495,7 +495,7 @@
                 </div>
             </div> <!-- end col -->
             <div class="col-md-3">
-                <div class="card position-fixed bottom-0 recruitment-history">
+                <div class="card bottom-0 recruitment-history">
                     <h5 class="card-header">招募歷程記錄</h5>
                     <div class="card-body"></div>
                 </div>

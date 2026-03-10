@@ -4422,4 +4422,13 @@ table.dataTable.dtr-inline.collapsed>tbody>tr>td.dtr-control:before {
     top: 140px;
     height: calc(100vh - 225px);
     margin-bottom: 84px;
+    position: fixed;
+}
+
+@media (max-width: 768px) {
+    .recruitment-history {
+        position: static;
+        top: unset;
+        margin-bottom: 24px;
+    }
 }
