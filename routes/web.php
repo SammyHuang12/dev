@@ -43,4 +43,10 @@ Route::prefix('admin')->group(function () {
     // Dashboard
     Route::get('/dashboard', [AdminController::class, 'dashboard'])->name('admin.dashboard');
 
+    // Table-lists
+    Route::get('/table-lists', [AdminController::class, 'tableLists'])->name('admin.tableLists');
+
+     // EventDetails
+    Route::get('/event-details', [AdminController::class, 'eventDetails'])->name('admin.eventDetails');
+
 });

@@ -9,7 +9,7 @@
     <meta content="Themesdesign" name="author">
     <link rel="icon" type="image/png" href="{{ asset('/picture/kencont_logo_sb.png') }}">
 
-    @if($page !== 'login')
+    @if($page !== 'login' && $page !== 'eventDetails')
     <!-- jquery.vectormap css -->
     <link rel="stylesheet" href="{{ asset('css/jquery-jvectormap-1.2.2.css') }}" type="text/css">
 
@@ -85,7 +85,7 @@
     <script src="{{ asset('js/simplebar.min.js') }}"></script>
     <script src="{{ asset('js/waves.min.js') }}"></script>
 
-    @if($page !== 'login')
+    @if($page !== 'login' && $page !== 'eventDetails')
     <!-- apexcharts -->
     <script src="{{ asset('js/apexcharts.min.js') }}"></script>
 
@@ -107,6 +107,13 @@
     <script src="{{ asset('js/dashboard.init.js') }}"></script>
     @endif
 
+    @if($page === 'eventDetails')
+    <!-- bs custom file input plugin -->
+    <script src="{{ asset('js/bs-custom-file-input.min.js') }}"></script>
+
+    <script src="{{ asset('js/form-element.init.js') }}"></script>
+
+    @endif
     <!-- App js -->
     <script src="{{ asset('js/app.js') }}"></script>
 

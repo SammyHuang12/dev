@@ -83,7 +83,8 @@
                                 <span>客製頁面</span>
                             </a>
                             <ul class="sub-menu" aria-expanded="false">
-                                <li><a href="{{$projectName}}/table-lists">列表頁</a></li>
+                                <li><a href="table-lists">列表頁</a></li>
+                                <li><a href="event-details">eventDetails</a></li>
                                 <li><a href="list-details.html">Details</a></li>
                             </ul>
                         </li>
