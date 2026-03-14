@@ -4416,19 +4416,7 @@ table.dataTable.dtr-inline.collapsed>tbody>tr>td.dtr-control:before {
 
 /*# sourceMappingURL=app.min.css.map */
 
-.recruitment-history {
-    z-index: 1000;
-    /* 確保在最上層 */
-    top: 140px;
-    height: calc(100vh - 225px);
-    margin-bottom: 84px;
-    position: fixed;
-}
+.scroll-wrapper {
+    max-height: 300px;
 
-@media (max-width: 768px) {
-    .recruitment-history {
-        position: static;
-        top: unset;
-        margin-bottom: 24px;
-    }
 }

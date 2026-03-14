@@ -43,10 +43,10 @@ Route::prefix('admin')->group(function () {
     // Dashboard
     Route::get('/dashboard', [AdminController::class, 'dashboard'])->name('admin.dashboard');
 
-    // Table-lists
-    Route::get('/table-lists', [AdminController::class, 'tableLists'])->name('admin.tableLists');
+    // table_lists
+    Route::get('/table-lists', [AdminController::class, 'table_lists'])->name('admin.table_lists');
 
-     // EventDetails
-    Route::get('/event-details', [AdminController::class, 'eventDetails'])->name('admin.eventDetails');
+     // event_details
+    Route::get('/event-details', [AdminController::class, 'event_details'])->name('admin.event_details');
 
 });
