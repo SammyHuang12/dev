@@ -9,7 +9,7 @@
     <meta content="Themesdesign" name="author">
     <link rel="icon" type="image/png" href="{{ asset('/picture/kencont_logo_sb.png') }}">
 
-    @if($page !== 'login' && $page !== 'eventDetails')
+    @if($page !== 'login' && $page !== 'eventDetails' && $page !== '404')
     <!-- jquery.vectormap css -->
     <link rel="stylesheet" href="{{ asset('css/jquery-jvectormap-1.2.2.css') }}" type="text/css">
 
@@ -38,8 +38,8 @@
 
 <!-- <body class=" bg-light"> -->
 
-<body {!! $page !=='login' ? 'data-topbar="dark"' : 'class="auth-body-bg"' !!}>
-    @if($page !== 'login')
+<body {!! $page !=='login' && $page !=='404' ? ' data-topbar="dark"' : ' class="auth-body-bg"' !!}>
+    @if(($page ?? '') !== 'login' && ($page ?? '') !== '404')
     <!-- Begin page -->
     <div id="layout-wrapper">
         <!-- ========== top Sidebar Start ========== -->
@@ -74,8 +74,10 @@
         </footer>
     </div>
     <!-- end main content-->
-    @else
+    @elseif (($page ?? '') === 'login')
     @yield('login')
+    @elseif (($page ?? '') === '404')
+    @yield('page404')
     @endif
 
     <!-- JAVASCRIPT -->
@@ -85,7 +87,7 @@
     <script src="{{ asset('js/simplebar.min.js') }}"></script>
     <script src="{{ asset('js/waves.min.js') }}"></script>
 
-    @if($page !== 'login' && $page !== 'eventDetails')
+    @if($page !== 'login' && $page !== 'eventDetails' && $page !== '404')
     <!-- apexcharts -->
     <script src="{{ asset('js/apexcharts.min.js') }}"></script>
 

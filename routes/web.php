@@ -49,4 +49,11 @@ Route::prefix('admin')->group(function () {
      // event_details
     Route::get('/event-details', [AdminController::class, 'event_details'])->name('admin.event_details');
 
+    Route::fallback(function () {
+        $data ['page'] = '404';
+        $data ['title'] = '404'; 
+    return response()->view('admin.page404', $data, 404);    
+    // abort(404);
+    });
+
 });
