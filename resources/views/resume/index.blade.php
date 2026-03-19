@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>專業人才履歷系統 Pro - Business Resume</title>
-
+    <link rel="icon" type="image/png" href="{{ asset('images/resume/icon.png') }}">
     <link rel="stylesheet" href="{{ asset('vendor/bootstrap/css/bootstrap.min.css') }}">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&display=swap" rel="stylesheet">
     @vite('resources/js/app.js')
@@ -15,7 +15,7 @@
 <body data-project="{{ $projectName }}">
     <nav class="resume-nav p-3 mb-4 shadow no-print">
         <div class="container d-flex justify-content-between align-items-center flex-wrap gap-3">
-            <img class="img-fluid" src="images/resume/kenconts_logo_s.png" alt="kenconts logo">
+            <img class="img-fluid" src="{{ asset('images/resume/kenconts_logo_s.png') }}" alt="kenconts logo">
 
             <h1 class="m-0 fw-bold fs-4 d-inline-block"><i class="bi bi-briefcase-fill me-2"></i>專業人才履歷系統</h1>
             <div class="ms-auto ms-lg-0">
@@ -280,7 +280,6 @@
     </div>
     <script src="{{ asset('vendor/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
     <!-- <script type="module" src="{{ mix('js/app.js') }}"></script> -->
-    @vite('resources/js/app.js')
 
     <!-- <script src="js/data.js"></script>
     <script src="js/all.js"></script> -->

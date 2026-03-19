@@ -8,12 +8,19 @@ import '../scss/app.scss'; // 全域 CSS
 const project = document.body.dataset.project; // 在 Blade body 上設定 data-project
 console.log(project);
 
-if (project === 'resume') {
-    import('../scss/modules/resume.scss');
-    import('./modules/resume.js').then(module => {
-        module.default.init();
-    });
-}
+// if (project === 'resume') {
+//     import('../scss/modules/resume.scss');
+//     import('./modules/resume.js').then(module => {
+//         module.default.init();
+//     });
+// }
 // else if (project === 'projectB') {
 //     import('../scss/modules/projectB.scss');
 // }
+
+if (project === 'resume') {
+    import('../scss/modules/resume.scss');  // SCSS 可以動態 import
+
+    // ← 直接 import JS，不用 .then
+    import('./modules/resume.js');
+}
