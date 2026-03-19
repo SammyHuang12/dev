@@ -6,6 +6,7 @@ use App\Http\Controllers\ComputerController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\ResumeController;
 use App\Http\Controllers\AdminController;
+use App\Http\Controllers\HphealthController;
 
 Route::get('/', function () {
     return view('admin.login');
@@ -53,6 +54,20 @@ Route::prefix('admin')->group(function () {
         $data ['page'] = '404';
         $data ['title'] = '404'; 
     return response()->view('admin.page404', $data, 404);    
+    // abort(404);
+    });
+
+});
+
+// HomeProHealth
+Route::prefix('hphealth')->group(function () {
+
+    Route::get('/{id?}', [HphealthController::class, 'index'])->name('hphealth.index');
+
+    Route::fallback(function () {
+        $data ['page'] = '404';
+        $data ['title'] = '404'; 
+    return response()->view('hphealth.page404', $data, 404);    
     // abort(404);
     });
 
