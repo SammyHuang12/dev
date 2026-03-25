@@ -159,7 +159,7 @@
 
                                         <div class="col-sm-5">
                                             <div>
-                                                <img src="static/picture/megamenu-img.png" alt="megamenu-img"
+                                                <img src="{{ asset('/picture/megamenu-img.png') }}" alt="megamenu-img"
                                                     class="img-fluid mx-auto d-block">
                                             </div>
                                         </div>

@@ -50,12 +50,17 @@ Route::prefix('admin')->group(function () {
      // event_details
     Route::get('/event-details', [AdminController::class, 'event_details'])->name('admin.event_details');
 
+     // tables-editable
+    Route::get('/tables-editable', [AdminController::class, 'tables_editable'])->name('admin.tables_editable');
+
     Route::fallback(function () {
         $data ['page'] = '404';
         $data ['title'] = '404'; 
     return response()->view('admin.page404', $data, 404);    
     // abort(404);
     });
+
+    Route::post('/update-date', [AdminController::class, 'updateDate'])->name('admin.updateDate');
 
 });
 

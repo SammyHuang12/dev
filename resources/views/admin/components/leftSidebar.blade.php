@@ -188,7 +188,7 @@
                                 <li><a href="tables-basic.html">Basic Tables</a></li>
                                 <li><a href="tables-datatable.html">Data Tables</a></li>
                                 <li><a href="tables-responsive.html">Responsive Table</a></li>
-                                <li><a href="tables-editable.html">Editable Table</a></li>
+                                <li><a href="tables-editable">Editable Table</a></li>
                             </ul>
                         </li>
 
