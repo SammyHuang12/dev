@@ -4420,18 +4420,3 @@ table.dataTable.dtr-inline.collapsed>tbody>tr>td.dtr-control:before {
     max-height: 300px;
 
 }
-
-.record-edits p[data-field],
-.record-edits input[type="datetime-local"] {
-    font-size: 0.875rem;
-    /* 與 Bootstrap form-control-sm 相同 */
-    line-height: 1.25;
-    font-family: inherit;
-    /* 繼承父元素字型 */
-    cursor: pointer;
-    min-height: 17px;
-}
-
-.min-w-0 {
-    min-width: 0;
-}

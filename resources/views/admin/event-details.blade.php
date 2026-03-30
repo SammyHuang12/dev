@@ -1,26 +1,34 @@
 @extends('admin.layout')
 @section('content')
 <div class="page-content">
-    <div class="container-fluid">
+    <div class="container-fluid position-relative">
         <!-- start page title -->
-        <div class="row">
-            <div class="col-12">
-                <div class="page-title-box d-sm-flex align-items-center justify-content-between">
-                    <h4 class="mb-sm-0">List details</h4>
-
-                    <div class="page-title-right">
-                        <ol class="breadcrumb m-0">
-                            <li class="breadcrumb-item"><a href="javascript: void(0);">Forms</a></li>
-                            <li class="breadcrumb-item active">Forms Elements</li>
-                        </ol>
+        <div class="custom-fixed">
+            <div class="row">
+                <div class="col-12">
+                    <div class="page-title-box d-sm-flex align-items-center justify-content-between">
+                        <h4 class="mb-sm-0">招募人選資料細項</h4>
+                        <div class="page-title-right">
+                            <ol class="breadcrumb m-0">
+                                <li class="breadcrumb-item"><a href="javascript: void(0);">招募人選</a></li>
+                                <li class="breadcrumb-item active">招募人選細項</li>
+                            </ol>
+                        </div>
                     </div>
-
+                    <div class="button-items mb-3 w-100">
+                        <button type="button" id="formsend"
+                            class="btn btn-primary waves-effect waves-light">儲存送出</button>
+                        <button type="button" id="create_event"
+                            class="btn btn-info waves-light waves-effect">新增客面歷程</button>
+                        <button type="button" id="delete_candidate" data-id="AD202507290004"
+                            class="btn btn-warning waves-effect waves-light">刪除該筆資料</button>
+                    </div>
                 </div>
             </div>
         </div>
         <!-- end page title -->
 
-        <div class="row">
+        <div class="row custom-m-top">
             <div class="col-md-8">
                 <div class="card">
                     <div class="card-body">

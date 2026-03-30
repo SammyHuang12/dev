@@ -1,0 +1,87 @@
+.vertical-collpsed .custom-fixed {
+    left: 70px;
+}
+
+.custom-fixed {
+    position: fixed;
+    top: 70px;
+    right: 0;
+    left: 240px;
+    z-index: 4;
+    background-color: #eff3f6;
+    padding: 24px 24px 0 24px;
+    /* width: calc(100% - 240px); */
+}
+
+.custom-fixed .button-items {
+    display: flex;
+    flex-wrap: nowrap;
+    /* ❗ 不換行 */
+    overflow-x: auto;
+    /* ✅ 只允許 X scroll */
+    overflow-y: hidden;
+    gap: 8px;
+    -webkit-overflow-scrolling: touch;
+    /* 手機滑順 */
+}
+
+.custom-fixed button {
+    flex: 0 0 auto;
+    /* 不縮放按鈕寬度 */
+}
+
+@media (max-width: 992px) {
+    .vertical-collpsed .custom-fixed {
+        left: 0;
+        width: 100%;
+    }
+
+    .custom-fixed {
+        left: 0;
+        width: 100%;
+    }
+}
+
+.custom-m-top {
+    margin-top: 46px;
+}
+
+/* 有 button-items 時 */
+.custom-fixed:has(.button-items)+.custom-m-top {
+    margin-top: 112px;
+}
+
+@media (max-width: 576px) {
+    .custom-m-top {
+        margin-top: 70px;
+    }
+
+    /* 有 button-items 時 */
+    .custom-fixed:has(.button-items)+.custom-m-top {
+        margin-top: 138px;
+    }
+
+}
+
+@media (max-width: 376px) {
+
+    /* 有 button-items 時 */
+    /* .custom-fixed:has(.button-items)+.custom-m-top {
+        margin-top: 188px;
+    } */
+}
+
+.record-edits p[data-field],
+.record-edits input[type="datetime-local"] {
+    font-size: 0.875rem;
+    /* 與 Bootstrap form-control-sm 相同 */
+    line-height: 1.25;
+    font-family: inherit;
+    /* 繼承父元素字型 */
+    cursor: pointer;
+    min-height: 17px;
+}
+
+.min-w-0 {
+    min-width: 0;
+}
