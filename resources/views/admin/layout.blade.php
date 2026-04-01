@@ -40,6 +40,7 @@
 
     <!-- App Css-->
     <link rel="stylesheet" href="{{ asset('css/app.min.css') }}" id="app-style" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="{{ asset('css/admin.css') }}" id="app-style" rel="stylesheet" type="text/css">
 </head>
 
 <!-- <body class=" bg-light"> -->

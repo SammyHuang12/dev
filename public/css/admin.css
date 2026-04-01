@@ -7,7 +7,7 @@
     top: 70px;
     right: 0;
     left: 240px;
-    z-index: 4;
+    z-index: 1054;
     background-color: #eff3f6;
     padding: 24px 24px 0 24px;
     /* width: calc(100% - 240px); */
@@ -28,6 +28,10 @@
 .custom-fixed button {
     flex: 0 0 auto;
     /* 不縮放按鈕寬度 */
+}
+
+.custom-fixed .modal {
+    z-index: 1060 !important;
 }
 
 @media (max-width: 992px) {
@@ -84,4 +88,22 @@
 
 .min-w-0 {
     min-width: 0;
+}
+
+/* 針對該區塊內的 dd 加上底線 */
+dl.row dd {
+    border-bottom: 1px solid #dee2e6;
+    /* Bootstrap 標準灰色線條顏色 */
+    padding-bottom: 5px;
+    /* 文字與線的距離 */
+    margin-bottom: 15px;
+    /* 每行之間的間距 */
+    min-height: 1.5em;
+    /* 確保沒內容時高度不縮回 */
+}
+
+/* 如果希望 dt (標題) 也對齊底線高度 */
+dl.row dt {
+    padding-bottom: 5px;
+    margin-bottom: 15px;
 }
