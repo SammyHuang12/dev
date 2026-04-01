@@ -50,6 +50,9 @@ Route::prefix('admin')->group(function () {
      // event_details
     Route::get('/event-details', [AdminController::class, 'event_details'])->name('admin.event_details');
 
+     // event_details_new
+    Route::get('/event-details-new', [AdminController::class, 'event_details_new'])->name('admin.event_details_new');
+
      // tables-editable
     Route::get('/tables-editable', [AdminController::class, 'tables_editable'])->name('admin.tables_editable');
 
