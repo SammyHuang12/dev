@@ -126,7 +126,7 @@
     <script src="{{ asset('js/form-element.init.js') }}"></script>
     @endif
 
-    <!-- @if($page === 'tables-editable' or $page === 'event-details') @endif-->
+    {{-- @if($page === 'tables-editable' or $page === 'event-details') @endif --}}
     @if(($page ?? '') === 'tables-editable')
     <!-- Table Editable plugin -->
     <script src="{{ asset('js/table-edits.min.js') }}"></script>
