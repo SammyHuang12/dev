@@ -1,8 +1,4 @@
 {{-- leftsidebar.blade.php --}}
-@php
-$projectName = request()->segment(1) ?? 'admin'; // 可用 URL 判斷專案前綴
-$sidebar = config('project.sidebar',[]);
-@endphp
 <div class="vertical-menu">
     <div data-simplebar="" class="h-100">
         <!-- User details -->

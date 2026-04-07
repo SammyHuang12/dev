@@ -53,12 +53,12 @@ return [
                         'route' => 'table_lists',
                     ],
                     [
-                        'title' => 'eventDetails',
+                        'title' => '招募人選資料細項',
                         'route' => 'event_details',
                     ],
                     [
-                        'title' => 'detailsNew',
-                        'route' => 'event_details_new',
+                        'title' => '招募人選資料細項(唯讀)',
+                        'route' => 'event_details_readonly',
                     ],
                 ]
             ],

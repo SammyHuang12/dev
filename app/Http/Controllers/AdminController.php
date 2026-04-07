@@ -100,13 +100,13 @@ class AdminController extends Controller
         return view($data ['projectName'].'.'.$data ['page'], $data);
     }
 
-    public function event_details_new()
+    public function event_details_readonly()
     
     {
         $data = array();
         $data ['projectName'] = 'admin';
-        $data ['page'] = 'event-details-new';
-        $data ['title'] = 'Event-Details-new';
+        $data ['page'] = 'event-details-readonly';
+        $data ['title'] = 'Event-Details-readonly';
         $data ['event_data'] = [
             [
                 "date" => "2026/3/11 上午9:41",

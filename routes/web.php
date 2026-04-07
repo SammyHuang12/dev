@@ -29,7 +29,11 @@ Route::get('login', [loginController::class, 'index']);
 Route::get('resume', [ResumeController::class, 'index']);
 
 // admin
-Route::prefix('admin')->group(function () {
+Route::prefix('admin')
+    ->middleware(['web', 'admin.sidebar'])  
+    //執行'admin.sidebar' => \App\Http\Middleware\Admin\ShareSidebar::class,
+    
+    ->group(function () {
 
     // 登入頁
     Route::get('/', [AdminController::class, 'login'])->name('admin.login');
@@ -50,8 +54,8 @@ Route::prefix('admin')->group(function () {
      // event_details
     Route::get('/event-details', [AdminController::class, 'event_details'])->name('admin.event_details');
 
-     // event_details_new
-    Route::get('/event-details-new', [AdminController::class, 'event_details_new'])->name('admin.event_details_new');
+     // event_details_readonly
+    Route::get('/event-details-readonly', [AdminController::class, 'event_details_readonly'])->name('admin.event_details_readonly');
 
      // tables-editable
     Route::get('/tables-editable', [AdminController::class, 'tables_editable'])->name('admin.tables_editable');

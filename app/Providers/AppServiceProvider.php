@@ -26,8 +26,8 @@ class AppServiceProvider extends ServiceProvider
             return config('app.frontend_url')."/password-reset/$token?email={$notifiable->getEmailForPasswordReset()}";
         });
         
-        $host = request()->getHost();
-        $path = request()->path();
+        $host = request()->getHost();   //localhost
+        $path = request()->path();      //admin/event-details-readonly
 
         // ✅ 正式機：用網域判斷
         $domainMap = [
@@ -42,6 +42,12 @@ class AppServiceProvider extends ServiceProvider
             // ✅ 本機：用 path 判斷
             if (str_starts_with($path, 'admin')) {
                 $project = 'admin';
+                // View::composer('*', function ($view) use ($project) {
+                //     $view->with([
+                //         'projectName', $project,
+                //         'sidebar' => config('project.sidebar', []),
+                //     ]);
+                // });
             } elseif (str_starts_with($path, 'hphealth')) {
                 $project = 'hphealth';
             } elseif (str_starts_with($path, 'resume')) {
@@ -56,10 +62,5 @@ class AppServiceProvider extends ServiceProvider
         if (file_exists($file)) {
             Config::set('project', require $file);
         }
-
-        View::composer('*', function ($view) use ($project) {
-            $view->with('projectName', $project);
-        });
-
     }
 }
