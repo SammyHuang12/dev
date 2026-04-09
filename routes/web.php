@@ -48,6 +48,10 @@ Route::prefix('admin')
     // Dashboard
     Route::get('/dashboard', [AdminController::class, 'dashboard'])->name('admin.dashboard');
 
+    // Dashboard
+    Route::get('/calendar', [AdminController::class, 'calendar'])->name('admin.calendar');
+
+
     // table_lists
     Route::get('/table-lists', [AdminController::class, 'table_lists'])->name('admin.table_lists');
 

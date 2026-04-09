@@ -41,6 +41,17 @@ class AdminController extends Controller
         return view($data ['projectName'].'.'.$data ['page'], $data);
     }
 
+    public function calendar()
+    
+    {
+        $data = array();
+        $data ['projectName'] = 'admin';
+        $data ['page'] = 'calendar';
+        $data ['title'] = 'Calendar';        
+    
+        return view($data ['projectName'].'.'.$data ['page'], $data);
+    }
+
     public function table_lists()
     
     {

@@ -24,6 +24,14 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/frappe-gantt/dist/frappe-gantt.css">
     @endif
 
+    @if(($page ?? '') === 'calendar')
+    <!-- Plugin css -->
+    <link rel="stylesheet" href="{{ asset('css/main.min.css') }}" type="text/css">
+    <link rel="stylesheet" href="{{ asset('css/main.min1.css') }}" type="text/css">
+    <link rel="stylesheet" href="{{ asset('css/main.min2.css') }}" type="text/css">
+    <link rel="stylesheet" href="{{ asset('css/main.min3.css') }}" type="text/css">
+    @endif
+
     @if(($page ?? '') === 'tables-editable')
     <link
         href="https://themesdesign.in/upcube/layouts/assets/libs/datatables.net-autoFill-bs4/css/autoFill.bootstrap4.min.css"
@@ -117,6 +125,20 @@
     <script src="{{ asset('js/responsive.bootstrap4.min.js') }}"></script>
 
     <script src="{{ asset('js/dashboard.init.js') }}"></script>
+    @endif
+
+    @if(($page ?? '') === 'calendar')
+    <!-- plugin js -->
+    <script src="{{ asset('js/moment.min.js') }}"></script>
+    <script src="{{ asset('js/jquery-ui.min.js') }}"></script>
+    <script src="{{ asset('js/main.min.js') }}"></script>
+    <script src="{{ asset('js/main.min1.js') }}"></script>
+    <script src="{{ asset('js/main.min2.js') }}"></script>
+    <script src="{{ asset('js/main.min3.js') }}"></script>
+    <script src="{{ asset('js/main.min4.js') }}"></script>
+
+    <!-- Calendar init -->
+    <script src="{{ asset('js/calendar.init.js') }}"></script>
     @endif
 
     @if(($page ?? '') === 'event-details')
