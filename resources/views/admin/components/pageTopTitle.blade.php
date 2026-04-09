@@ -11,7 +11,7 @@
                     </ol>
                 </div>
             </div>
-            @if($sidebarMenu['route'] !=='dashboard')
+            @if($sidebarMenu['parent_title'] ==='客製頁面')
             <div class="button-items mb-3">
                 <button type="button" id="formsend" class="btn btn-primary waves-effect waves-light">儲存送出</button>
                 <button type="button" id="create_event" class="btn btn-info waves-light waves-effect">新增客面歷程</button>
