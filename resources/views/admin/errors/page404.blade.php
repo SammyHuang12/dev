@@ -1,4 +1,4 @@
-@extends('admin.layout')
+@extends('admin.layouts.app')
 @section('page404')
 <div class="bg-overlay"></div>
 <div class="my-5 pt-5">

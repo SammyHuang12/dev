@@ -1,4 +1,4 @@
-@extends('admin.layout')
+@extends('admin.layouts.app')
 @section('content')
 <div class="page-content">
     <form id="candidatedetail" name="candidatedetail">
@@ -10,6 +10,7 @@
             <!-- end page title -->
             <div class="row custom-m-top">
                 <div class="col-md-12">
+                    {{--@include('admin.components.addModal')--}}
                     <div class="card">
                         <div class="card-body">
                             <div id="accordion" class="custom-accordion">

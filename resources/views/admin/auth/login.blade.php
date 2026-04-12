@@ -1,4 +1,4 @@
-@extends('admin.layout')
+@extends('admin.layouts.app')
 @section('login')
 <div class="bg-overlay"></div>
 <div class="wrapper-page">

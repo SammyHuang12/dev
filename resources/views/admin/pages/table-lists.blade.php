@@ -1,4 +1,4 @@
-@extends('admin.layout')
+@extends('admin.layouts.app')
 @section('content')
 <div class="page-content">
     <div class="container-fluid">
@@ -7,7 +7,6 @@
         <!-- end page title -->
         <div class="row custom-m-top">
             <div class="col-12">
-                @include('admin.components.addModal')
                 <div class="card">
                     <div class="card-body">
                         <h4 class="card-title">Custom Tabs</h4>

@@ -17,7 +17,7 @@
                 <button type="button" id="create_event" class="btn btn-info waves-light waves-effect">新增客面歷程</button>
                 <button type="button" id="delete_candidate" data-id="AD202507290004"
                     class="btn btn-warning waves-effect waves-light">刪除該筆資料</button>
-                {{-- @include('admin.components.addModal') --}}
+                @include('admin.components.addModal')
             </div>
             @endif
         </div>

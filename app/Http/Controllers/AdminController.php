@@ -15,7 +15,7 @@ class AdminController extends Controller
         $data ['page'] = 'login';
         $data ['title'] = 'Login';        
     
-        return view($data ['projectName'].'.'.$data ['page'], $data);
+        return view($data ['projectName'].'.auth.'.$data ['page'], $data);
     }
     
     public function authenticate(Request $request)
@@ -38,7 +38,7 @@ class AdminController extends Controller
         $data ['page'] = 'dashboard';
         $data ['title'] = 'Dashboard';        
     
-        return view($data ['projectName'].'.'.$data ['page'], $data);
+        return view($data ['projectName'].'.pages.'.$data ['page'], $data);
     }
 
     public function calendar()
@@ -49,7 +49,7 @@ class AdminController extends Controller
         $data ['page'] = 'calendar';
         $data ['title'] = 'Calendar';        
     
-        return view($data ['projectName'].'.'.$data ['page'], $data);
+        return view($data ['projectName'].'.pages.'.$data ['page'], $data);
     }
 
     public function table_lists()
@@ -60,7 +60,7 @@ class AdminController extends Controller
         $data ['page'] = 'table-lists';
         $data ['title'] = 'Table-Lists';        
     
-        return view($data ['projectName'].'.'.$data ['page'], $data);
+        return view($data ['projectName'].'.pages.'.$data ['page'], $data);
     }
 
     public function event_details()
@@ -108,7 +108,7 @@ class AdminController extends Controller
             ],
         ];
     Log::channel('event_details')->info(json_encode($data ['event_data'], JSON_UNESCAPED_UNICODE));
-        return view($data ['projectName'].'.'.$data ['page'], $data);
+        return view($data ['projectName'].'.pages.'.$data ['page'], $data);
     }
 
     public function event_details_readonly()
@@ -156,7 +156,7 @@ class AdminController extends Controller
             ],
         ];
     // Log::channel('event_details')->info(json_encode($data ['event_data'], JSON_UNESCAPED_UNICODE));
-        return view($data ['projectName'].'.'.$data ['page'], $data);
+        return view($data ['projectName'].'.pages.'.$data ['page'], $data);
     }
 
     public function tables_editable()
@@ -186,7 +186,7 @@ class AdminController extends Controller
             ],
         ]; 
     
-        return view($data ['projectName'].'.'.$data ['page'], $data);
+        return view($data ['projectName'].'.pages.'.$data ['page'], $data);
     }
 
 public function updateDate(Request $request)

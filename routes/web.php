@@ -67,7 +67,7 @@ Route::prefix('admin')
     Route::fallback(function () {
         $data ['page'] = '404';
         $data ['title'] = '404'; 
-    return response()->view('admin.page404', $data, 404);    
+    return response()->view('admin.errors.page404', $data, 404);    
     // abort(404);
     });
 
