@@ -81,14 +81,14 @@ $(document).ready(function () {
                     $icon.removeClass("fa-save").addClass("fa-spinner fa-spin");
                 },
                 success: function (res) {
-
-                    if (!res.success) {
+                    console.log(res);
+                    if (!res.status) {
                         alert(res.message || "更新失敗");
                         return;
                     }
 
                     const finalValue = res.value || newValue;
-
+                    console.log(res.value);
                     $p.text(formatDateTime(finalValue));
                     $p.show();
                     $input.remove();
@@ -152,3 +152,15 @@ function parseToInputFormat(text) {
 
     return y + "-" + mo + "-" + d + "T" + h + ":" + min;
 }
+
+$(function () {
+    $('.modal-block').each(function () {
+        const $modal = $(this).find('.modal');
+
+        if ($modal.length && !$modal.data('moved')) {
+            $('body').append($modal);
+            $modal.data('moved', true);
+        }
+    });
+});
+
