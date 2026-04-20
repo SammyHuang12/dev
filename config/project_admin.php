@@ -60,6 +60,10 @@ return [
                         'title' => '招募人選資料細項(唯讀)',
                         'route' => 'event_details_readonly',
                     ],
+                    [
+                        'title' => '招募人選圖表(唯讀)',
+                        'route' => 'stats',
+                    ],
                 ]
             ],
         ],    
@@ -172,6 +176,10 @@ return [
                     [
                         'title' => 'Data Tables',
                         'route' => 'Data-Tables',
+                    ],
+                    [
+                        'title' => 'Tables Editable',
+                        'route' => 'tables_editable',
                     ],
                 ]
             ],

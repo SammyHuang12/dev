@@ -7,6 +7,7 @@ use App\Http\Controllers\LoginController;
 use App\Http\Controllers\ResumeController;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\HphealthController;
+use App\Http\Controllers\chart\ChartStatusController;
 
 Route::get('/', function () {
     return view('admin.login');
@@ -72,6 +73,9 @@ Route::prefix('admin')
     });
 
     Route::post('/update-date', [AdminController::class, 'updateDate'])->name('admin.updateDate');
+
+    // 圖表的頁面
+    Route::get('/stats', [ChartStatusController::class, 'daily'])->name('stats.daily');
 
 });
 
